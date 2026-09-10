@@ -694,7 +694,40 @@
 
       <div class="br-pagebody">
 
-        <!-- start you own content here -->
+        <div class="br-section-wrapper">
+          <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Mantenimiento de Productos</h6>
+          <!-- <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p> -->
+
+          <div class="table-wrapper">
+            <table id="datatable1" class="table display responsive nowrap">
+              <thead>
+                <tr>
+                  <th class="wd-15p">Nombre Producto</th>
+                  <th class="wd-15p">Acción</th>
+                  <th class="wd-20p">Acción</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Coca Cola de 2L</td>
+                  <td><button class="btn btn-primary">Editar</button></td>
+                  <td><button class="btn btn-danger">Eliminar</button></td>
+                  
+                </tr>
+                <tr>
+                  <td>Agua de 1L</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-icon"> <div class="fa fa-edit"></div> </button></td>
+                  <td><button type="button" class="btn btn-outline-danger btn-icon"> <div class="fa fa-trash"> </div></button></td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div><!-- table-wrapper -->
+
+          
+        </div>
 
       </div><!-- br-pagebody -->
 
