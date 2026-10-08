@@ -52,6 +52,7 @@ switch ($_GET["op"]) {
                 $output["pro_nom"] = $row["pro_nom"];
             }
         }
+        
         break;
 
     case "eliminar":
