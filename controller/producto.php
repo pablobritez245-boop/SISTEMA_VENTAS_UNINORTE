@@ -18,7 +18,7 @@ switch ($_GET["op"]) {
             $sub_array[] = $row["pro_nom"];
             $sub_array[] = '<button type="button" onClick="editar('.$row["pro_id"].');" id="'.$row["pro_id"].'" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button>';
             $sub_array[] = '<button type="button" onClick="eliminar('.$row["pro_id"].');" id="'.$row["pro_id"].'" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button>';
-
+        
             $data[] = $sub_array;
         }
 
@@ -31,6 +31,31 @@ switch ($_GET["op"]) {
 
         echo json_encode($results);
 
+    break;
+
+    case "guardaryeditar":
+        $datos=$producto->get_producto_x_id($_POST["pro_id"]);
+        if(empty($_POST["pro_id"])){
+            if(is_array($datos)==true and count($datos)==0){
+                $producto->insert_product($_POST["pro_nom"]);
+            }
+        }else{
+            $producto->update_product($_POST["pro_id"],$_POST["pro_nom"]);
+        }
         break;
-}
+
+    case "mostrar":
+        $datos=$producto->get_producto_x_id($_POST["pro_id"]);
+        if(is_array($datos)==true and count($datos)>0){
+            foreach($datos as $row){
+                $output["pro_id"] = $row["pro_id"];
+                $output["pro_nom"] = $row["pro_nom"];
+            }
+        }
+        break;
+
+    case "eliminar":
+        $producto->delete_producto($_POST["pro_id"]);
+        break;
+    }
 ?>

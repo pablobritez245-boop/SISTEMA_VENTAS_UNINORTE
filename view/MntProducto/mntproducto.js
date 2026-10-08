@@ -62,4 +62,16 @@ $(document).ready(function(){
 
 });
 
+$(document).on("click", "#btnNuevo", function(){
+    $("#modalMantenimiento").modal("show");
+
+});
+
+function eliminar(pro_id){
+    alert("Funcion eliminar ID: " + pro_id);
+    $.post("../../controller/producto.php?op=eliminar", {pro_id: pro_id}, function(data){
+        // tabla.ajax.reload();
+    });
+}
+
 init();
