@@ -7,20 +7,20 @@
                 
             </div>
             
-            <form action="" method="POST">
+            <form action="" method="POST" id="producto_form">
 
                 <div class="modal-body pd-25">
-                
+                    <input type="hidden" name="pro_id" id="pro_id">
                     <div class="form-group d-flex align-items-center justify-content-between">
                     <label for="pro_nom" class="form-control-label me-2">Nombre del Producto</label>
-                    <input type="text" class="form-control me-2" id="pro_nom" name="pro_nom" placeholder="Ingrese el nombre del producto">
+                    <input type="text" class="form-control me-2" id="pro_nom" name="pro_nom" placeholder="Ingrese el nombre del producto" required>
                     </div>
                     
                 </div>
             
             
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Guardar</button>
+                    <button type="submit" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Guardar</button>
                     <button type="button" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-dismiss="modal">Cerrar</button>
                 </div>
            
